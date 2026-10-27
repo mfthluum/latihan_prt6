@@ -16,13 +16,13 @@ class LayoutRulesExample extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tiga Aturan Layout Flutter'),
       ),
-      body: MyPages2(),
+      body: MyPages3(),
    );
  }
 }
 
-class MyPages2 extends StatelessWidget {
-  const MyPages2({super.key});
+class MyPages3 extends StatelessWidget {
+  const MyPages3({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,34 +32,6 @@ class MyPages2 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-             // const Divider(height: 40, thickness: 2),
-
-              const Text(
-                '3. Aturan Posisi (dengan Center)',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 10),
-              const Text('Induk abu-abu berukuran 200x200. Kotak merah 80x80 tidak bisa menaruh dirinya di tengah, jadi kita gunakan widget Center.'),
-              const SizedBox(height: 10),
-
-              // CONTOH ATURAN 3 (CENTER)
-              Container(
-                width: 200,
-                height: 200,
-                color: Colors.grey[300], // Induk yang memiliki ruang
-                // Induk yang menentukan posisi
-                child: Center( 
-                  child: Container(
-                    width: 80,
-                    height: 80,
-                    color: Colors.red,
-                    child: const Text('Center', style: TextStyle(color: Colors.white)),
-                  ),
-                ),
-              ),
-
-              const Divider(height: 40, thickness: 2),
-
               const Text(
                 '3. Aturan Posisi (dengan Align)',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
